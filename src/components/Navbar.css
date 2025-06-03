@@ -1,0 +1,254 @@
+/* Navbar Container */
+.sidebar {
+  background-color: #ebf3e8; /* Background yang lebih terang */
+  color: #333; /* Warna gelap untuk teks */
+  width: 100%; /* Lebar penuh */
+  height: 60px; /* Tinggi tetap */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Menyebarkan title dan link */
+  padding: 0 20px;
+  position: fixed; /* Fix di atas halaman */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Pastikan tetap di atas konten lain */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan halus */
+  transition: transform 0.3s ease; /* Transisi smooth saat hide/show */
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Navbar visibility */
+.visible {
+  transform: translateY(0); /* Tampilkan navbar */
+}
+
+.hidden {
+  transform: translateY(-100%); /* Sembunyikan navbar */
+}
+
+/* Navbar Heading */
+.sidebar h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50; /* Warna gelap untuk judul */
+  margin: 0;
+}
+
+/* Hamburger Menu for Mobile */
+.sidebar .menu-toggle {
+  display: none; /* Tersembunyi secara default */
+  background: transparent;
+  border: none;
+  color: #2c3e50;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Navbar Links */
+.sidebar ul {
+  list-style-type: none;
+  display: flex; /* Tampilan horizontal untuk desktop */
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar List Item */
+.sidebar ul li {
+  margin: 0 15px;
+}
+
+/* Link Styling */
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #2c3e50; /* Teks gelap untuk keterbacaan */
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+/* Hover Effect on Links */
+.sidebar ul li a:hover {
+  background-color: #45a049; /* Highlight background saat hover */
+  color: #fff; /* Ubah warna teks saat hover */
+}
+
+/* Welcome Text */
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  color: #2c3e50;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #e74c3c; /* Merah untuk logout */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Merah lebih gelap saat hover */
+}
+
+/* Login Button */
+.login-button {
+  background-color: #3498db; /* Biru untuk login */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #2980b9; /* Biru lebih gelap saat hover */
+}
+
+/* Content Padding */
+.content {
+  padding-top: 60px; /* Padding agar tidak tumpang tindih dengan navbar */
+}
+
+/* Custom Alert */
+.custom-alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  animation: fadeInOut 3s ease-in-out;
+  z-index: 1000;
+}
+
+.custom-alert.success {
+  background-color: #4caf50;
+}
+
+.custom-alert.error {
+  background-color: #f44336;
+}
+
+.carebot-logo {
+  width: 100px; /* Sesuaikan ukuran */
+  height: auto;
+}
+
+/* Dropdown Styling */
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #2c3e50;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown */
+.dropdown-toggle:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ebf3e8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  display: none; /* Sembunyikan menu secara default */
+}
+
+.dropdown-menu.active {
+  display: block; /* Tampilkan menu jika aktif */
+}
+
+/* Dropdown menu link styling */
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu .menu-link {
+  padding: 10px 15px;
+  white-space: nowrap;
+  display: block;
+}
+
+/* Hover effect on dropdown links */
+.dropdown-menu .menu-link:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  /* Dropdown in mobile view */
+  .dropdown-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
+  .sidebar ul {
+    display: none; /* Sembunyikan menu di mobile secara default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #ebf3e8;
+    width: 100%;
+    z-index: 100;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  .sidebar ul.active {
+    display: block; /* Tampilkan menu jika aktif */
+  }
+
+  .sidebar .menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: #2c3e50;
+    cursor: pointer;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

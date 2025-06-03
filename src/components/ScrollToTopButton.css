@@ -1,0 +1,24 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 90px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for appearing */
+}
+
+.scroll-to-top.show {
+    opacity: 1; /* Make visible when 'show' class is added */
+}
+
+.scroll-to-top:hover {
+    background-color: #fffb00;
+    color: rgb(0, 0, 0);
+}

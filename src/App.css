@@ -1,3 +1,5 @@
+@import "leaflet/dist/leaflet.css";
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* src/App.css */
+df-messenger {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* src/App.css */
+df-messenger {
+  --df-messenger-bot-message: #f5f5f5;
+  --df-messenger-button-titlebar-color: #007bff;
+  --df-messenger-button-titlebar-font-size: 16px;
+  --df-messenger-chat-background-color: #ffffff;
+  --df-messenger-chat-border-radius: 15px;
+  --df-messenger-font-color: #000000;
 }

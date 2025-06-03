@@ -1,0 +1,227 @@
+/* General Layout */
+.signup-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Title Styling */
+.signup-form h2 {
+  font-size: 26px;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Error & Success Messages */
+.error, .success {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.success {
+  color: #2ecc71;
+}
+
+
+/* Form Input Styling */
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+  transition: all 0.3s;
+  background: #fafafa;
+}
+
+.signup-form input:focus {
+  border-color: #6cbf6f;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+.signup-form input:hover {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+/* Button Styling */
+.signup-form button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #4CAF50, #388E3C);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.signup-form button:hover {
+  background: linear-gradient(135deg, #45a049, #2e7d32);
+  transform: translateY(-2px);
+}
+
+/* Styling Dropdown */
+.signup-form select {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Efek Hover & Fokus */
+.signup-form select:hover,
+.signup-form select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+/* Health History Section */
+.health-history {
+  margin: 15px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Checkbox Container */
+.health-history label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Health History Section */
+.health-history {
+  margin: 15px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Checkbox Container */
+.health-history label {
+  display: flex;
+  align-items: center; /* Menjadikan checkbox dan teks sejajar */
+  gap: 10px; /* Jarak antara checkbox dan teks */
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Custom Checkbox */
+.health-history input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.health-history input[type="checkbox"]::before {
+  content: "\2713";
+  font-size: 14px;
+  color: white;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.health-history input[type="checkbox"]:checked {
+  background-color: #4CAF50;
+  border-color: #388E3C;
+}
+
+.health-history input[type="checkbox"]:checked::before {
+  display: block;
+}
+
+/* Checkbox Hover Effect */
+.health-history input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+/* Sign Up Section */
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+.login-link a {
+  color: #2E7D32;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.login-link a:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .signup-form {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .signup-form h2 {
+    font-size: 22px;
+  }
+  
+  .signup-form input {
+    padding: 12px;
+  }
+  
+  .signup-form button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

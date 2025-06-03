@@ -1,0 +1,71 @@
+/* General Styles for Admin Dashboard */
+.admin-dashboard {
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    margin-top: -100px;
+
+  }
+  
+  .dashboard-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .dashboard-content h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #E91E63;
+    margin-bottom: 30px;
+  }
+  
+  /* Link Styles */
+  .dashboard-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .dashboard-links a {
+    text-decoration: none;
+    background-color: #fde5ec;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-links a:hover {
+    background-color: #E91E63;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(145, 109, 179, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .dashboard-content {
+      padding: 20px;
+    }
+  
+    .dashboard-content h1 {
+      font-size: 1.6rem;
+    }
+  
+    .dashboard-links a {
+      padding: 12px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  

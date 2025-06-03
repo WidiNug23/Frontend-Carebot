@@ -1,0 +1,31 @@
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it is above other content */
+  }
+  
+  .chat-icon img {
+    width: 50px; /* Adjust the size of the chat icon */
+    height: 50px;
+  }
+  
+  .chat-window {
+    position: fixed;
+    bottom: 80px; /* Adjust to ensure it doesn't overlap with the icon */
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure it is above other content */
+    background-color: #fff; /* Optional: background color */
+  }
+  
+  .chat-window iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  

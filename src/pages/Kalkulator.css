@@ -1,0 +1,272 @@
+/* Gaya Umum */
+.div-kalkulator {
+  width: 100%;
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: #f4f7f6;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul */
+.h1-kalkulator {
+  color: #2c786c;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.h2-kalkulator {
+  color: #2c786c;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Formulir */
+.form-kalkulator {
+  width: 100%;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Layout Form */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Kolom Form */
+.left-side,
+.right-side {
+  flex: 1;
+  min-width: 48%;
+}
+
+/* Label & Input */
+.label-kalkulator {
+  display: block;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.input-kalkulator,
+.select-kalkulator {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #b2dfdb;
+  border-radius: 10px;
+  font-size: 1.1em;
+  transition: border-color 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.input-kalkulator:focus,
+.select-kalkulator:focus {
+  border-color: #2c786c;
+  outline: none;
+}
+
+/* Tombol */
+.button-kalkulator {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #2c786c, #004d40);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  margin-top: 20px;
+}
+
+.button-kalkulator:hover {
+  background: linear-gradient(135deg, #004d40, #2c786c);
+  transform: scale(1.05);
+}
+
+/* Container Hasil */
+.results-container {
+  width: 100%;
+  background: #ffffff;
+  padding: 35px;
+  margin-top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Judul Nutrisi */
+.result-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #004d40;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #2c786c;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+/* Tambahan agar hasil lebih jelas */
+.result-category {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2c786c;
+  margin-top: 20px;
+}
+
+
+/* Item List dengan Kurungan & Jarak Lebih Renggang */
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px; /* Menambah padding agar lebih renggang */
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 1.1em; /* Ukuran font sedikit diperbesar */
+  font-family: Arial, sans-serif;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #2c786c;
+  border-right: 6px solid #2c786c;
+  transition: all 0.3s ease;
+  gap: 50px; /* Menambah jarak antar label dan nilai */
+}
+
+/* Efek Hover */
+.result-item:hover {
+  background: #f0faf9;
+  transform: scale(1.02);
+}
+
+/* Label Hasil */
+.result-label {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #004d40;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2c786c;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+/* Nilai Hasil */
+.result-value {
+  color: #2c786c;
+  font-weight: bold;
+  text-align: right; /* Memastikan nilai tetap rata kanan */
+  flex: 1.5; /* Menambah fleksibilitas agar lebih renggang */
+  letter-spacing: 1px; /* Memberi sedikit jarak antar karakter */
+  padding: 5px 1px; /* Menambah padding agar nilai tidak terlalu menempel */
+  margin-left: 10px; /* Menambah jarak antar nilai */
+}
+
+.custom-alert-kalkulator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(14, 252, 109);
+  animation: fadeInOut 3s ease-in-out;
+  z-index: 1000;
+}
+
+.custom-alert-kalkulator.success {
+  background-color: #4caf50;
+}
+
+.custom-alert-kalkulator.error {
+  background-color: #f44336;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsif untuk Mobile */
+@media (max-width: 480px) {
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px; /* Mengurangi jarak agar tidak terlalu lebar di layar kecil */
+    padding: 12px 18px;
+  }
+
+  .result-label,
+  .result-value {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+
+/* Responsif untuk Tablet */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .button-kalkulator {
+    font-size: 1.1em;
+  }
+
+  .results-list {
+    max-width: 100%;
+  }
+
+  .result-item {
+    font-size: 0.9em;
+    padding: 12px 16px;
+  }
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 480px) {
+  .h1-kalkulator {
+    font-size: 2em;
+  }
+
+  .h2-kalkulator {
+    font-size: 1.5em;
+  }
+
+  .input-kalkulator,
+  .select-kalkulator {
+    font-size: 1em;
+    padding: 14px;
+  }
+
+  .result-item {
+    font-size: 0.85em;
+    padding: 10px 14px;
+  }
+}

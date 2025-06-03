@@ -1,0 +1,149 @@
+/* General Container Styles */
+.crud-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 80vh; /* Tambahan untuk membuat kontainer lebih tinggi */
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .crud-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .crud-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: border 0.2s ease;
+  }
+  
+  .crud-form input:focus {
+    border-color: #916db3;
+    outline: none;
+  }
+  
+  .crud-form button {
+    padding: 10px 20px;
+    background-color: #916db3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .crud-form button:hover {
+    background-color: #734d94;
+  }
+  
+  /* Button Styles */
+  button {
+    margin-right: 5px;
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #916db3;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  table tr:hover {
+    background-color: #f4f4f4;
+  }
+  
+  table button {
+    padding: 5px 10px;
+    margin: 0 2px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  table button:hover {
+    background-color: #c53c3c;
+    color: #fff;
+  }
+  
+  table button:first-of-type {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  table button:last-of-type {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  /* Error and Success Message Styles */
+  .error {
+    color: #e74c3c;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .success {
+    color: #2ecc71;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Payload Display */
+  pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .crud-form {
+      flex-direction: column;
+    }
+  
+    .crud-form input, .crud-form button {
+      width: 100%;
+    }
+  }
+  

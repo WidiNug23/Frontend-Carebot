@@ -1,0 +1,351 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #86a789; /* Soft background color */
+  color: #333;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
+}
+
+content{
+  margin-top: 0px;
+}
+
+/* Slider Styles */
+.slider-container {
+  margin-top: 0px;  
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.image-container {
+  width: 100%;
+  padding-top: 33.33%;
+  position: relative;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Title Container */
+.title-container {
+  text-align: center;
+  background-color: #86A789; /* Main green shade */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px auto;
+  max-width: 95%;
+}
+
+.nutrition-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #FEF9F2;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Menu Styles */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #86A789;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 95%;
+}
+
+.menu-item {
+  flex-basis: calc(25% - 20px);
+  max-width: 350px;
+  text-align: center;
+  margin: 10px;
+  background: #EBF3E8;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  background: #B2C8BA;
+  box-shadow: 0 8px 30px #86A789;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.menu-item h3 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.menu-item p {
+  font-size: 0.95em;
+  color: #666;
+}
+
+.menu-item:hover h3, .menu-item:hover p {
+  color: #ffffff;
+}
+
+/* Article Styles */
+.articles-container {
+  padding: 20px;
+  background-color: #86A789;
+  border-radius: 10px;
+  margin: 20px auto;
+  margin-bottom: 80px;
+  max-width: 95%;
+}
+
+.article-image {
+  max-height: 70%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.articles-title {
+  font-size: 2em;
+  color: #FEF9F2;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.article-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.article-container {
+  flex-basis: calc(25% - 20px);
+  max-width: 350px;
+  margin: 10px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s ease;
+  opacity: 0;
+}
+
+.article-container.animate {
+  opacity: 1;
+  animation: zoom-in 0.5s ease forwards;
+}
+
+.article-container:hover {
+  transform: translateY(-5px);
+  background-color: #86A789;
+}
+
+.article-title {
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0;
+  color: #86A789;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.article-container:hover .article-title {
+  color: #F7EED3;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.popup.visible {
+  opacity: 1; /* Set opacity to 1 when visible */
+}
+
+.popup-content {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80%; /* Set a max height for the popup */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */
+  position: relative; /* Allow absolute positioning of the button */
+  display: flex;
+  flex-direction: column; /* Allow content to stack vertically */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-popup {
+  background: #45a049; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: auto; /* Push the button to the bottom of the container */
+}
+
+.close-popup:hover {
+  background-color: #f64343; /* Change background on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Agar video lebih seimbang */
+  width: 90%; /* Memperbesar container hingga 90% dari lebar layar */
+  max-width: 1200px; /* Membatasi lebar maksimal agar tetap rapi */
+  margin: 0 auto; /* Agar tetap di tengah */
+  min-height: auto; /* Menyesuaikan tinggi berdasarkan jumlah video */
+}
+
+.video-item {
+  flex: 1 1 calc(33.333% - 20px); /* Maksimal 3 video dalam 1 baris */
+  max-width: 300px; /* Memperbesar ukuran video */
+  text-align: center;
+}
+
+.video-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Pastikan selalu 16:9 */
+  object-fit: cover; /* Memastikan gambar tetap rapi */
+  border-radius: 10px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.video-item img:hover{
+  transform: scale(1.05) translateY(-5px); /* Membesarkan + mengangkat sedikit */
+  box-shadow: 0 6px 15px #0b9c23; /* Menambahkan bayangan */
+}
+
+.video-item h4 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.video-item a {
+  text-decoration: none;
+  color: #0b9c23;
+  font-weight: bold;
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+  max-width: 90vw;
+  max-height: 50vh;
+}
+
+@media (max-width: 900px) {
+  .video-item {
+    flex: 1 1 calc(50% - 20px); /* Menjadi 2 video per baris */
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-item {
+    flex: 1 1 100%; /* Menjadi 1 video per baris */
+    max-width: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu-item, .article-container {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item, .article-container {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .nutrition-title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item, .article-container {
+    flex-basis: 100%;
+  }
+
+  .slider-container {
+    width: 100%;
+  }
+
+  .nutrition-title {
+    font-size: 1.5em;
+  }
+}

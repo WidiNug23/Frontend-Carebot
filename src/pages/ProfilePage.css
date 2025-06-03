@@ -1,0 +1,433 @@
+/* Profile Page Layout */
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Profile Info Styling */
+.profile-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.profile-info h2 {
+    grid-column: 1 / -1;
+    font-size: 22px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.profile-row {
+    display: contents;
+}
+
+.profile-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.profile-value {
+    color: #333;
+}
+
+
+/* Kalkulator Results Styling */
+.kalkulator-results {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Result Item Styling */
+.result-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.result-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 0; /* Remove margin-left to align to the left */
+}
+
+/* Adjusting the text alignment for specific nutrients */
+.carbs-text {
+    color: #ff9800;
+    margin-left: 0; /* Ensure this aligns left */
+}
+
+.protein-text {
+    color: #4caf50;
+    margin-left: 0; /* Ensure this aligns left */
+
+}
+
+.fat-text {
+    color: #f44336;
+    margin-left: 0; /* Ensure this aligns left */
+
+}
+
+
+/* Stat Bars Styling */
+.stat-bar-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 170px;
+
+}
+
+/* Stat Bar Styling */
+.stat-bar {
+    height: 12px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    font-size: 12px;
+    color: white;
+    text-align: left;
+}
+
+.stat-bar.carbs {
+    background-color: #ff9800;
+}
+
+.stat-bar.protein {
+    background-color: #4caf50;
+}
+
+.stat-bar.fat {
+    background-color: #f44336;
+}
+
+
+/* Loading */
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Modal Overlay - Background Transparan */
+.modal-overlay {
+    position: fixed; /* Harus fixed agar modal tetap mengambang */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Efek transparan */
+    display: flex;
+    justify-content: center; /* Tengah secara horizontal */
+    align-items: center; /* Tengah secara vertikal */
+}
+
+/* Modal Box */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; /* Modal hanya setengah dari layar */
+    max-width: 600px; /* Batas maksimum agar tidak terlalu besar */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animasi Muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Header */
+.modal-content h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Warna lebih gelap agar terbaca */
+    margin-bottom: 20px;
+}
+
+/* Label */
+.modal-content label {
+    display: block;
+    font-weight: bold;
+    color: #222; /* Warna lebih gelap */
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Input & Select */
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.8); /* Background lebih terang */
+    color: #222; /* Warna teks lebih gelap */
+    outline: none;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder Warna Abu */
+.modal-content input::placeholder,
+.modal-content select::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Efek Fokus */
+.modal-content input:focus,
+.modal-content select:focus {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Select Box Style */
+.modal-content select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23222" height="20" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 35px;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Button Style */
+.modal-buttons button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Button Simpan */
+.modal-buttons button:first-child {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    margin-right: 10px;
+}
+
+.modal-buttons button:first-child:hover {
+    background: linear-gradient(135deg, #0056b3, #0099cc);
+}
+
+/* Button Tutup */
+.modal-buttons button:last-child {
+    background: linear-gradient(135deg, #ff4b1f, #ff9068);
+    color: white;
+}
+
+.modal-buttons button:last-child:hover {
+    background: linear-gradient(135deg, #d43f00, #ff7043);
+}
+
+/* Responsive Modal */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal-buttons button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+  
+  .edit-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+
+/* MEDIA QUERIES */
+
+/* For screens less than or equal to 768px (Tablets and Mobile) */
+@media (max-width: 768px) {
+    .profile-page {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .profile-info {
+        padding: 15px;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .profile-info h2 {
+        font-size: 18px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    /* Adjust result items */
+    .result-item p {
+        margin-left: 10px; /* Reduce left margin for smaller screens */
+    }
+
+    /* Stat Bar adjustments */
+    .stat-bar-container {
+        margin-right: 0; /* Reset margin-right */
+        margin-left: 0;  /* Add margin-left for full width */
+    }
+
+    .stat-bar {
+        font-size: 10px; /* Smaller font size for stats */
+        padding: 0 5px;
+    }
+
+    /* For loading text */
+    .loading {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+/* For screens less than or equal to 480px (Mobile devices) */
+@media (max-width: 480px) {
+    .profile-page {
+        padding: 10px;
+    }
+
+    .profile-info {
+        padding: 10px;
+    }
+
+    .profile-info h1 {
+        font-size: 18px;
+    }
+
+    .profile-info h2 {
+        font-size: 16px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    .result-item {
+        padding: 15px; /* Slightly reduced padding */
+    }
+
+    .result-item h3 {
+        font-size: 18px; /* Smaller title for mobile */
+    }
+
+    .result-item p {
+        font-size: 14px;
+        margin-left: 5px; /* Even smaller margin-left */
+    }
+
+    .stat-bar-container {
+        margin-top: 10px;
+    }
+
+    .stat-bar {
+        height: 10px;
+    }
+
+    .stat-bar-text {
+        font-size: 10px;
+    }
+
+    .loading {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* For screens less than or equal to 320px (Very small mobile devices) */
+@media (max-width: 320px) {
+    .profile-info h1 {
+        font-size: 16px; /* Reduce even more for very small screens */
+    }
+
+    .profile-info h2 {
+        font-size: 14px;
+    }
+
+    .profile-info p {
+        font-size: 12px;
+    }
+
+    .result-item h3 {
+        font-size: 16px;
+    }
+
+    .result-item p {
+        font-size: 12px;
+    }
+
+    .stat-bar {
+        font-size: 8px; /* Smaller font size for very small devices */
+    }
+
+    .stat-bar-container {
+        margin-top: 5px;
+    }
+
+    .loading {
+        padding: 5px;
+        font-size: 12px;
+    }
+}

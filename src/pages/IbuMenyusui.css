@@ -1,0 +1,355 @@
+/* ibu-menyusui.css */  
+.container-ibu-menyusui {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 0px;
+  background-color: #ebf3e8;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: #00796b;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+
+  .article-heading-ibu-menyusui {
+    margin-top: 40px; /* Adjust this value to increase or decrease the space */
+  }
+  
+  .nutrisi-list-ibu-menyusui {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Jarak antar container */
+    justify-content: center; /* Pusatkan jika kurang dari 3 */
+  }
+  
+  .nutrisi-item-ibu-menyusui {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 1 1 calc(33.333% - 30px); /* Lebar menyesuaikan 3 kolom */
+    max-width: calc(33.333% - 30px); /* Batas lebar untuk menjaga keseimbangan */
+    min-width: 250px; /* Lebar minimum agar container tidak terlalu kecil */
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .nutrisi-item-ibu-menyusui:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .nutrisi-item-ibu-menyusui strong {
+    font-size: 1.1em;
+    color: #37474f;
+  }
+  
+  .nutrisi-item-ibu-menyusui ul {
+    list-style-type: circle;
+    margin: 10px 0 0 20px;
+    padding: 0;
+  }
+  
+  .description-dropdown-ibu-menyusui h2 {
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 8px;
+    background-color: #e0f2f1;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .description-dropdown-ibu-menyusui h2:hover {
+    background-color: #b2dfdb;
+  }
+  
+  .arrow-ibu-menyusui {
+    font-size: 1em;
+    margin-left: 10px;
+  }
+  
+  .collapse-ibu-menyusui {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding: 10px 0;
+    font-size: 0.95em;
+    color: #455a64;
+  }
+  
+  .collapse-ibu-menyusui.show {
+    display: block;
+  }
+  
+  .no-data-ibu-menyusui {
+    text-align: center;
+    font-size: 1.1em;
+    color: #9e9e9e;
+    margin-top: 20px;
+  }
+  
+  .articles-list-ibu-menyusui {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px; /* Space between articles */
+  }
+  
+  .article-container-ibu-menyusui {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .article-container-ibu-menyusui:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .article-title-ibu-menyusui {
+    font-size: 1.2em;
+    color: #00796b;
+  }
+  
+  .article-content-ibu-menyusui {
+    font-size: 1em;
+    color: #455a64;
+    margin-top: 10px;
+  }
+  
+  
+  .popup-ibu-menyusui {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content-ibu-menyusui {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+    max-height: 80vh; /* Set maksimum tinggi popup */
+    overflow-y: auto; /* Enable scroll jika isi lebih banyak dari tinggi popup */
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .close-popup-ibu-menyusui {
+    background: #45a049; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: auto; /* Push the button to the bottom of the container */
+  }
+  
+  .close-popup-ibu-menyusui:hover {
+    background-color: #f64343; /* Change background on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+
+  .disclaimer-ibu-menyusui {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background for calm appearance */
+    color: #2f4f4f; /* Dark slate gray text color for readability */
+    border-left: 5px solid #45a049; /* Add a subtle border to draw attention */
+    border-right: 5px solid #45a049; /* Add a subtle border to draw attention */
+    font-size: 1.1rem; /* Slightly larger font for emphasis */
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners for a friendly look */
+  }
+
+  .video-heading-ibu-menyusui {
+    margin-top: 40px; /* Adjust this value to increase or decrease the space */
+  }
+  
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Jarak default */
+    justify-content: center; /* Agar video tetap seimbang */
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: auto;
+  }
+  
+  .video-item {
+    flex: 1 1 calc(33.333% - 15px); /* Maksimal 3 video dalam 1 baris */
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  /* Pastikan gambar tetap rasio 16:9 */
+  .video-item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  
+  .video-item img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 6px 15px #0b9c23;
+  }
+  
+  .video-item h4 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .video-item a {
+    text-decoration: none;
+    color: #0b9c23;
+    font-weight: bold;
+  }
+  
+  .video-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Supaya ada ruang di layar kecil */
+  }
+  
+  .video-popup-content {
+    position: relative;
+    background: #00796b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ff0000;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-thumbnail {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .video-thumbnail:hover {
+    transform: scale(1.05);
+  }
+  
+  /* RESPONSIVE DESIGN */
+  iframe {
+    width: 560px;
+    height: 315px;
+    max-width: 90vw;
+    max-height: 50vh;
+  }
+  
+  /* Untuk layar di bawah 768px (Tablet & HP) */
+  @media screen and (max-width: 768px) {
+    .video-popup-content {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+  
+  /* Untuk layar di bawah 480px (Smartphone kecil) */
+  @media screen and (max-width: 480px) {
+    .video-popup-content {
+      padding: 10px;
+      width: 95%;
+    }
+  
+    .close-button {
+      font-size: 20px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  
+  
+  /* Saat layar mengecil, jarak antar video ikut mengecil */
+  @media (max-width: 900px) {
+    .video-container {
+      gap: 15px; /* Mengurangi jarak antar video */
+    }
+  
+    .video-item {
+      flex: 1 1 calc(50% - 10px); /* 2 video per baris */
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .video-container {
+      gap: 10px; /* Jarak lebih kecil */
+    }
+  
+    .video-item {
+      flex: 1 1 100%; /* 1 video per baris */
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .nutrisi-item-ibu-menyusui {
+      flex: 1 1 calc(50% - 30px); /* Menyesuaikan menjadi 2 kolom */
+      max-width: calc(50% - 30px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .nutrisi-item-ibu-menyusui {
+      flex: 1 1 100%; /* Menyesuaikan menjadi 1 kolom */
+      max-width: 100%;
+    }
+  }
+  

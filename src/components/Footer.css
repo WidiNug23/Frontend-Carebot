@@ -1,0 +1,80 @@
+/* Footer Styles */
+.footer {
+    background-color: #E2F3E0; /* Soft green background for calmness */
+    color: #333; /* Dark text color for readability */
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center; /* Pusatkan footer */
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Pastikan semua elemen sejajar */
+    flex-wrap: wrap;
+}
+
+/* Bagian kiri (Logo + Teks Hak Cipta) */
+.footer-left {
+    flex: 1;
+}
+
+.footer-left-content {
+    display: flex;
+    align-items: center; /* Sejajarkan logo dan teks */
+    gap: 15px; /* Beri jarak antara logo dan teks */
+}
+
+.footer-left-content p {
+    margin-top: 15px; /* Sesuaikan angka ini sesuai kebutuhan */
+}
+
+.footer-logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Bagian kanan (Link) */
+.footer-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.footer-right a {
+    color: #4CAF50;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #388E3C;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        justify-content: center;
+    }
+
+    .footer-right a {
+        margin: 10px;
+    }
+}
